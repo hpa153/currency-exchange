@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/chart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Currency Exchange</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <span class="header-title">Currency Exchange</span>
+      </div>
+      <div class="graph">
+        <div class="graph-sidebar">
+          <div class="graph-sidebar-info">
+            <h2>Currencies</h2>
+            <section>
+              <label for="cars">Base currency:</label>
+              <select 
+                name="base-currency" 
+                id="base-currency"
+                onchange="getNewBase(this.value)"
+              >
+            </section>
+            </select>
+          </div>
+          <div class="graph-sidebar-items"></div>
+        </div>
+        <div class="graph-container">
+          <div class="graph-dialog graph--hidden">
+            <div class="graph-dialog--header">
+              <h3>Info Dialog</h3>
+              <p class="graph-dialog--info"></p>
+            </div>
+            <div class="graph-dialog--bottom">
+              <button class="graph--close-button" onclick="closeMenu()">OK</button>
+            </div>
+          </div>
+          <div class="graph-chart"></div>
+        </div>
+      <!--   
+        <div class="graph-container">
+          <div class="graph-col">
+            <span class="graph--col-label"></span>
+          </div>
+          <div class="graph-col">
+            <span class="graph--col-label"></span>
+          </div>
+          <div class="graph-col">
+            <span class="graph--col-label"></span>
+          </div>
+          <div class="graph-col">
+            <span class="graph--col-label"></span>
+          </div>
+          <div class="graph-col">
+            <span class="graph--col-label"></span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
